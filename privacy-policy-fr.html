@@ -1,0 +1,106 @@
+<body>
+    <div class="container">
+        <div class="lang-switch"><a href="privacy-policy-en.html">English</a></div>
+
+        <h1>Politique de Confidentialit&#233;</h1>
+        <p class="updated">Derni&#232;re mise &#224; jour : 9 novembre 2026</p>
+
+        <p>FlexHubTV (nom technique : PlexHubTV) est un client lecteur multim&#233;dia pour Android TV et d'autres appareils Android. Il se connecte aux serveurs et sources multim&#233;dia <strong>que vous configurez vous-m&#234;me</strong> (par exemple votre propre serveur Plex Media Server ou Jellyfin, ou une playlist que vous fournissez). Il est d&#233;velopp&#233; et publi&#233; par un d&#233;veloppeur ind&#233;pendant. Il <strong>n'est pas affili&#233;, approuv&#233; ni parrain&#233; par Plex Inc., Jellyfin ou un quelconque fournisseur de contenu</strong>. L'application ne fournit, n'h&#233;berge et ne distribue aucun contenu multim&#233;dia.</p>
+
+        <h2>Versions de l'application</h2>
+
+        <p>FlexHubTV est distribu&#233;e en une <strong>version Google Play</strong> et une <strong>version &#224; t&#233;l&#233;chargement direct</strong> (sideload, GitHub). Les deux partagent le m&#234;me code ; les diff&#233;rences qui comptent pour votre vie priv&#233;e sont la valeur par d&#233;faut de l'interrupteur de diagnostic (section 3) et quelques fonctions suppl&#233;mentaires de la version &#224; t&#233;l&#233;chargement direct (section 6).</p>
+
+        <h2>Donn&#233;es que nous collectons</h2>
+
+        <h3>1. Donn&#233;es de connexion (stock&#233;es sur votre appareil)</h3>
+        <ul>
+            <li>Jeton d'authentification Plex, identifiant de compte Plex, identifiants des serveurs Plex (ID serveur, adresse IP ou hostname)</li>
+            <li>Identifiants ou jetons des autres serveurs que vous ajoutez (par exemple Jellyfin), et les cl&#233;s d'API que vous saisissez (m&#233;tadonn&#233;es, sous-titres, IA, Trakt)</li>
+        </ul>
+        <p><strong>Stockage :</strong> les jetons et cl&#233;s d'API sont stock&#233;s sur votre appareil dans le stockage chiffr&#233; d'Android (EncryptedSharedPreferences, AES-256-GCM). Ils ne sont envoy&#233;s &#224; aucun serveur exploit&#233; par le d&#233;veloppeur ; ils ne sont transmis qu'au service concern&#233;, pour vous authentifier.</p>
+        <p><strong>Finalit&#233; :</strong> vous connecter &#224; vos comptes et serveurs et acc&#233;der &#224; vos biblioth&#232;ques m&#233;dia.</p>
+        <h3>2. Donn&#233;es de lecture (stock&#233;es sur votre appareil)</h3>
+        <ul>
+            <li>M&#233;dias que vous lisez (films, s&#233;ries, &#233;pisodes) et progression de lecture (position, dur&#233;e)</li>
+            <li>Favoris, watchlist, historique, profils locaux, t&#233;l&#233;chargements et r&#233;glages de l'application</li>
+        </ul>
+        <p><strong>Stockage :</strong> ces donn&#233;es sont conserv&#233;es dans le stockage priv&#233; de l'application sur votre appareil (base de donn&#233;es locale, prot&#233;g&#233;e par le bac &#224; sable d'Android). L'application ne les envoie &#224; aucun serveur exploit&#233; par le d&#233;veloppeur. Certaines fonctions facultatives que vous activez en envoient une partie aux tiers list&#233;s &#224; la section 5.</p>
+        <p><strong>Finalit&#233; :</strong> fournir des fonctions comme &#171; Reprendre la lecture &#187;, l'historique, les recommandations et les t&#233;l&#233;chargements hors ligne.</p>
+        <h3>3. Rapports de plantage, diagnostic et performance</h3>
+        <p><strong>Prestataires :</strong> Sentry (rapports de plantage et d'erreur, rapports de bug) et Google Firebase (Crashlytics, Analytics, Performance Monitoring). Un seul interrupteur, <strong>R&#233;glages &rarr; Syst&#232;me &amp; &#192; propos &rarr; Rapports de plantage</strong>, les commande tous.</p>
+        <p><strong>Donn&#233;es envoy&#233;es quand l'interrupteur est activ&#233; :</strong></p>
+        <ul>
+            <li>Mod&#232;le de l'appareil, version d'Android, version de l'application, type de build et mode d'installation (Google Play ou t&#233;l&#233;chargement direct)</li>
+            <li>Traces de pile et d&#233;tails d'erreur (les messages d'erreur passent par un filtre de masquage avant l'envoi &#224; Sentry)</li>
+            <li>&#201;crans visit&#233;s et &#233;v&#233;nements de l'application (par exemple navigation, lecture d&#233;marr&#233;e ou en &#233;chec, tentatives de connexion), avec des identifiants techniques tronqu&#233;s</li>
+            <li>Mesures de performance (d&#233;marrage, affichage des &#233;crans, r&#233;seau et lecture)</li>
+            <li>Un identifiant pseudonyme : un hachage SHA-256 tronqu&#233; de l'identifiant de votre profil (jamais l'identifiant brut), et un indicateur &#171; profil enfant &#187;</li>
+            <li>Identifiants g&#233;n&#233;r&#233;s par les SDK de Google (identifiants d'installation / d'instance d'application et, selon les r&#233;glages de votre appareil, l'identifiant publicitaire Android). Nous ne les utilisons pas pour la publicit&#233; et ne les vendons pas.</li>
+        </ul>
+        <p><strong>Consentement et valeur par d&#233;faut :</strong></p>
+        <ul>
+            <li><strong>Version Google Play : opt-in.</strong> Rien n'est collect&#233; ni envoy&#233; &#224; Sentry ou Firebase tant que vous n'avez pas activ&#233; l'interrupteur.</li>
+            <li><strong>Version &#224; t&#233;l&#233;chargement direct : opt-out.</strong> L'interrupteur est activ&#233; par d&#233;faut ; vous pouvez le d&#233;sactiver &#224; tout moment au m&#234;me endroit.</li>
+            <li>D&#233;sactiver l'interrupteur arr&#234;te imm&#233;diatement la collecte, sans red&#233;marrer l'application. Un choix d&#233;j&#224; fait est conserv&#233; lors des mises &#224; jour.</li>
+        </ul>
+        <p><strong>Finalit&#233; :</strong> d&#233;tecter les plantages et am&#233;liorer la stabilit&#233; et les performances de l'application. Ces donn&#233;es ne servent pas &#224; la publicit&#233;. La dur&#233;e de conservation d&#233;pend des r&#233;glages et des politiques propres &#224; ces prestataires (voir section 5).</p>
+        <h3>4. Rapports de bug que vous envoyez</h3>
+        <p>Si vous utilisez la fonction &#171; signaler un bug &#187;, le rapport est envoy&#233; &#224; Sentry. Il contient des informations sur l'appareil, la version de l'application, l'identifiant pseudonyme ci-dessus, votre description libre et les 500 derni&#232;res lignes du journal de l'application, dans lesquelles mots de passe, jetons et cl&#233;s sont retir&#233;s avant l'envoi. Un rapport n'est envoy&#233; que lorsque vous appuyez sur le bouton d'envoi, et seulement tant que l'interrupteur de la section 3 est activ&#233;. Merci de ne pas mettre d'informations personnelles dans la description.</p>
+        <h3>5. Requ&#234;tes r&#233;seau et services tiers facultatifs</h3>
+        <p>FlexHubTV communique avec :</p>
+        <ul>
+            <li><strong>Plex Inc.</strong> (plex.tv, et les serveurs Plex que vous configurez) et les <strong>serveurs Jellyfin</strong> que vous configurez</li>
+            <li><strong>The Movie Database (TMDb)</strong> pour les m&#233;tadonn&#233;es, images et notes, et <strong>OMDb API</strong> pour les notes IMDb : les requ&#234;tes contiennent le titre, l'ann&#233;e ou l'identifiant externe du m&#233;dia concern&#233;, et une cl&#233; d'API</li>
+            <li><strong>Les fournisseurs de sous-titres</strong> (OpenSubtitles, SubDL), si vous utilisez la recherche de sous-titres en ligne : les requ&#234;tes contiennent les identifiants ou le titre du m&#233;dia et une cl&#233; d'API</li>
+            <li><strong>Trakt</strong> (api.trakt.tv), uniquement si vous connectez votre compte Trakt (connexion par code appareil) : l'application envoie alors ce que vous regardez (historique, watchlist, progression de lecture) &#224; votre compte Trakt et le relit</li>
+            <li><strong>Moore Metrics</strong> (mooremetrics.com), uniquement si vous saisissez une cl&#233; d'API Moore Metrics et utilisez ses recommandations : une courte liste (10 au maximum) de titres de m&#233;dias est envoy&#233;e avec votre cl&#233; d'API pour obtenir des recommandations</li>
+            <li><strong>La traduction de sous-titres par IA</strong>, uniquement si vous la choisissez : le texte des sous-titres &#224; traduire est envoy&#233; &#224; Groq ou &#224; Google (Gemini) avec la cl&#233; d'API que vous avez saisie, ou au serveur IA auto-h&#233;berg&#233; dont vous indiquez l'adresse</li>
+            <li><strong>Les recommandations par un serveur IA auto-h&#233;berg&#233;</strong>, uniquement si vous en configurez un : des r&#233;f&#233;rences de m&#233;dias (identifiants et titres) sont envoy&#233;es au serveur dont vous saisissez l'adresse, que vous exploitez vous-m&#234;me</li>
+            <li><strong>Google Play services</strong> : l'application lui demande de mettre &#224; jour son fournisseur de s&#233;curit&#233; (aucune donn&#233;e de l'application)</li>
+        </ul>
+        <p>Ces services ont leurs propres politiques de confidentialit&#233;, par exemple :</p>
+        <ul>
+            <li>Plex : <a href="https://www.plex.tv/about/privacy-legal/">https://www.plex.tv/about/privacy-legal/</a></li>
+            <li>TMDb : <a href="https://www.themoviedb.org/privacy-policy">https://www.themoviedb.org/privacy-policy</a></li>
+            <li>OMDb : <a href="http://www.omdbapi.com/legal.htm">http://www.omdbapi.com/legal.htm</a></li>
+            <li>Trakt : <a href="https://trakt.tv/privacy">https://trakt.tv/privacy</a></li>
+            <li>Google (Firebase, Gemini) : <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+            <li>Sentry : <a href="https://sentry.io/privacy/">https://sentry.io/privacy/</a></li>
+            <li>Groq : <a href="https://groq.com/privacy-policy/">https://groq.com/privacy-policy/</a></li>
+        </ul>
+        <h3>6. Fonctions suppl&#233;mentaires de la version &#224; t&#233;l&#233;chargement direct uniquement</h3>
+        <p>La version &#224; t&#233;l&#233;chargement direct (pas la version Google Play) contient en plus : une <strong>v&#233;rification de mise &#224; jour</strong> aupr&#232;s de l'API des versions GitHub (api.github.com), qui, comme toute requ&#234;te web, expose votre adresse IP et votre agent utilisateur &#224; GitHub ; et des <strong>sources multim&#233;dia suppl&#233;mentaires que vous configurez vous-m&#234;me</strong> (par exemple des playlists ou comptes IPTV, un serveur auto-h&#233;berg&#233;, ou des sites web tiers). Quand vous les utilisez, l'application communique directement avec le fournisseur que vous avez choisi, et la politique de confidentialit&#233; de ce fournisseur s'applique. Le d&#233;veloppeur ne re&#231;oit pas ces requ&#234;tes.</p>
+
+        <h2>Stockage et conservation des donn&#233;es</h2>
+
+        <ul>
+            <li>Les donn&#233;es sensibles (jetons, cl&#233;s d'API) sont stock&#233;es localement dans le stockage chiffr&#233; d'Android ; les autres donn&#233;es de l'application restent dans le stockage priv&#233; de l'application sur votre appareil.</li>
+            <li>Nous ne vendons pas vos donn&#233;es et ne les utilisons pas pour la publicit&#233;.</li>
+            <li>Vous pouvez effacer toutes les donn&#233;es locales en d&#233;sinstallant l'application ou via l'option &#171; Effacer les donn&#233;es &#187; de votre appareil.</li>
+            <li>Les donn&#233;es de diagnostic d&#233;tenues par Sentry et Firebase sont conserv&#233;es selon les r&#233;glages et politiques de ces prestataires.</li>
+        </ul>
+
+        <h2>Confidentialit&#233; des enfants</h2>
+
+        <p>FlexHubTV ne s'adresse pas aux enfants de moins de 13 ans. L'application propose des profils locaux avec une option de contr&#244;le parental ; pour le reste, les restrictions de contenu d&#233;pendent de vos propres serveurs et profils.</p>
+
+        <h2>Vos droits</h2>
+
+        <ul>
+            <li><strong>Donn&#233;es sur l'appareil :</strong> vous pouvez supprimer toutes les donn&#233;es de l'application depuis votre appareil &#224; tout moment.</li>
+            <li><strong>Diagnostic :</strong> vous pouvez d&#233;sactiver l'interrupteur de la section 3 &#224; tout moment. Vous pouvez aussi contacter le d&#233;veloppeur pour vous renseigner sur les donn&#233;es de diagnostic vous concernant ou en demander la suppression ; ces donn&#233;es &#233;tant pseudonymes, nous pourrons vous demander des informations permettant de les retrouver (par exemple l'identifiant inclus dans un rapport de bug que vous avez envoy&#233;).</li>
+            <li><strong>Comptes tiers</strong> (Plex, serveurs Jellyfin, Trakt, TMDb et autres) : g&#233;r&#233;s par ces services ; vous pouvez r&#233;voquer l'acc&#232;s de FlexHubTV depuis votre compte chez chacun d'eux.</li>
+        </ul>
+
+        <h2>Modifications de cette politique</h2>
+
+        <p>Si cette politique change, la nouvelle version est publi&#233;e &#224; la m&#234;me adresse avec une nouvelle date de mise &#224; jour.</p>
+
+        <h2>Contact</h2>
+
+        <p>Pour toute question sur cette politique de confidentialit&#233;, vous pouvez contacter le d&#233;veloppeur :</p>
+        <p><strong>Email :</strong> <a href="mailto:chakir.elarram@gmail.com">chakir.elarram@gmail.com</a></p>
+    </div>
+</body>
+</html>
